@@ -10,7 +10,7 @@ import java.util.Map;
 @RestController
 @CrossOrigin
 public class ConnectionsController {
-    @RequestMapping(value = "/connections", method = RequestMethod.POST)
+    @PostMapping("/connections")
     public Map getConnections(@RequestBody ConnectionsInput input) throws IOException {
         LotApiClient client = new LotApiClient(input.getMarket(), input.getLanguage());
 
