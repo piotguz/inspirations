@@ -6,5 +6,8 @@ import java.util.List;
 
 @Data
 public class CityInfo {
-    List<CityAttraction> attractions;
+    String city;
+    String iata;
+    List<String> attractions;
+    List<String> rating;
 }
