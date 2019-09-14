@@ -1,12 +1,12 @@
-package com.example.demo.demo;
+package org.lobosze.api.data;
 
 import lombok.Data;
 
 import java.util.List;
 
 @Data
-public class Tile {
+public class Country {
     String name;
     String description;
-    List<Country> countries;
+    List<City> cities;
 }

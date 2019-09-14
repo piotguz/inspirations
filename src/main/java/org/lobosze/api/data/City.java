@@ -1,4 +1,4 @@
-package com.example.demo.demo;
+package org.lobosze.api.data;
 
 import lombok.Data;
 
