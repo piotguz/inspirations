@@ -2,10 +2,7 @@ package org.lobosze.api;
 
 import org.lobosze.api.data.ConnectionsInput;
 import org.lobosze.api.lot.LotApiClient;
-import org.springframework.web.bind.annotation.CrossOrigin;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.io.IOException;
 import java.util.Map;
@@ -14,7 +11,7 @@ import java.util.Map;
 @CrossOrigin
 public class ConnectionsController {
     @RequestMapping(value = "/connections", method = RequestMethod.POST)
-    public Map getConnections(ConnectionsInput input) throws IOException {
+    public Map getConnections(@RequestBody ConnectionsInput input) throws IOException {
         LotApiClient client = new LotApiClient(input.getMarket(), input.getLanguage());
 
         String token = client.getToken();
